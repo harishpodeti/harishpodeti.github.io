@@ -250,3 +250,28 @@
   new PureCounter();
 
 })()
+ 
+let clips = document.querySelectorAll(".portfolio-video")  ;
+  
+        /* Applying mouseover event on video clip 
+        and then we call play() function to play 
+        the video when the mouse is over the video */
+        clips.forEach(
+          clip=>{
+            clip.addEventListener("mouseover", function (e) {
+              clip.play();
+              clip.style.filter='none';
+          })
+    
+          /* Applying mouseout event on video clip 
+          and then we call pause() function to stop 
+          the video when the mouse is out the video */
+          clip.addEventListener("mouseout", function (e) {
+              clip.pause();
+              clip.style.filter='grayscale()';
+          })
+          }
+
+        )
+
+
